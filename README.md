@@ -22,6 +22,7 @@
 <article id="welcome">
 </article>
 <article id="pessoa">
+  <meta property="foo" content="bar">
   <h2>Pessoa</h2>
     <p>
       Nasci e cresci nas cidades que compõe o 
