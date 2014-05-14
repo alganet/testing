@@ -22,7 +22,7 @@
 <article id="welcome">
 </article>
 <article id="pessoa">
-  <span property="foo" content="bar"></span>
+  <span itemprop="foo">bla</span>
   <h2>Pessoa</h2>
     <p>
       Nasci e cresci nas cidades que compõe o 
