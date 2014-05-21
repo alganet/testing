@@ -21,7 +21,7 @@
 </header>
 <article id="welcome">
 </article>
-<article id="pessoa">
+<article id="pessoa" itemscope itemtype="http://mosai.org/Example">
   <span itemprop="foo">bar</span>
   <h2>Pessoa</h2>
     <p>
