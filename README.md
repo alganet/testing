@@ -1,6 +1,7 @@
 Test
 ====
 
-<a itemtype="http://mosai.org/parcel" 
-   href="https://github.com/alganet/testing/archive/master.zip"
-   itemscope>This is just a test.</a>
+<span itemtype="http://mosai.org/parcel" itemscope>
+   <a href="https://github.com/alganet/testing/archive/master.zip" 
+      itemprop="archive">This is just a test.</a>
+</span>
