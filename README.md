@@ -1,6 +1,8 @@
 Test
 ====
 
+[somelik](/doc)
+
 <div itemtype="http://mosai.org/parcel" itemscope="itemscope">
 	This code is on the
 	<code itemprop="lib">/blablabla</code> path on
