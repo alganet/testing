@@ -11,6 +11,7 @@ Test
 	   this zip
 	</a>.
 </div>
+  	<meta property=":about" content="A Collection of POSIX Shell Tools" />
 
 <div xmlns="http://www.w3.org/1999/xhtml"
   prefix="
@@ -19,7 +20,6 @@ Test
     rdfs: http://www.w3.org/2000/01/rdf-schema#"
   >
   <div typeof="rdfs:Resource" about="http://mosai.org/ns/mosai/workshop">
-  	<meta property=":about" content="A Collection of POSIX Shell Tools" />
     <div property=":about" content="A Collection of POSIX Shell Tools"></div>
     <div rel=":dependsOn" resource="http://mosai.org/ns/mosai/trix"></div>
     <div rel=":dependsOn" resource="http://mosai.org/ns/mosai/posit"></div>
