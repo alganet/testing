@@ -11,7 +11,7 @@ Test
 	   this zip
 	</a>.
 </div>
-  	<meta property=":about" content="A Collection of POSIX Shell Tools" />
+<meta property=":about" content="A Collection of POSIX Shell Tools" />
 
 <div xmlns="http://www.w3.org/1999/xhtml"
   prefix="
