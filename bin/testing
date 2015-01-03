@@ -1,28 +1,28 @@
 # Main tested shells
-shell_busybox  () ( var TARGET_SHELL="busybox sh" SHELL_PKG="busybox" )
-shell_dash     () ( var TARGET_SHELL="dash"       SHELL_PKG="dash"    )
-shell_bash     () ( var TARGET_SHELL="bash"       SHELL_PKG="bash"    )
-shell_zsh       () ( var TARGET_SHELL="zsh"        SHELL_PKG="zsh"     )
-shell_ksh       () ( var TARGET_SHELL="ksh"        SHELL_PKG="ksh"     )
-shell_pdksh     () ( var TARGET_SHELL="pdksh"      SHELL_PKG="pdksh"   )
-shell_mksh      () ( var TARGET_SHELL="mksh"       SHELL_PKG="mksh"    )
-shell_yash      () ( var TARGET_SHELL="yash"       SHELL_PKG="yash"    )
-shell_posh      () ( var TARGET_SHELL="posh"       SHELL_PKG="posh"    )
+shell_busybox  () ( export TARGET_SHELL="busybox sh" SHELL_PKG="busybox" )
+shell_dash     () ( export TARGET_SHELL="dash"       SHELL_PKG="dash"    )
+shell_bash     () ( export TARGET_SHELL="bash"       SHELL_PKG="bash"    )
+shell_zsh       () ( export TARGET_SHELL="zsh"        SHELL_PKG="zsh"     )
+shell_ksh       () ( export TARGET_SHELL="ksh"        SHELL_PKG="ksh"     )
+shell_pdksh     () ( export TARGET_SHELL="pdksh"      SHELL_PKG="pdksh"   )
+shell_mksh      () ( export TARGET_SHELL="mksh"       SHELL_PKG="mksh"    )
+shell_yash      () ( export TARGET_SHELL="yash"       SHELL_PKG="yash"    )
+shell_posh      () ( export TARGET_SHELL="posh"       SHELL_PKG="posh"    )
 
 # Extra shells for Ubuntu versions higher than 11.
-shell_bash2_0  () ( var TARGET_SHELL="bash2.05b"  SHELL_PKG="bash2.05b"\
+shell_bash2_0  () ( export TARGET_SHELL="bash2.05b"  SHELL_PKG="bash2.05b"\
 	                     PPA_REQUIRED="agriffis/bashes precise F5751EC8" )
-shell_bash3_0  () ( var TARGET_SHELL="bash3.0.16" SHELL_PKG="bash3.0.16"\
+shell_bash3_0  () ( export TARGET_SHELL="bash3.0.16" SHELL_PKG="bash3.0.16"\
 	                     PPA_REQUIRED="agriffis/bashes precise F5751EC8" )
-shell_bash3_2  () ( var TARGET_SHELL="bash3.2.48" SHELL_PKG="bash3.2.48"\
+shell_bash3_2  () ( export TARGET_SHELL="bash3.2.48" SHELL_PKG="bash3.2.48"\
 	                     PPA_REQUIRED="agriffis/bashes precise F5751EC8" )
-shell_bash4_2  () ( var TARGET_SHELL="bash4.2.45" SHELL_PKG="bash4.2.45"\
+shell_bash4_2  () ( export TARGET_SHELL="bash4.2.45" SHELL_PKG="bash4.2.45"\
                              PPA_REQUIRED="agriffis/bashes precise F5751EC8" )
-shell_zsh_beta () ( var TARGET_SHELL="zsh-beta"   SHELL_PKG="zsh-beta" )
+shell_zsh_beta () ( export TARGET_SHELL="zsh-beta"   SHELL_PKG="zsh-beta" )
 
 # Environments for Travis CI
-os_linux () ( var TRAVIS_OS="linux" )
-os_osx   () ( var TRAVIS_OS="osx"   )
+os_linux () ( export TRAVIS_OS="linux" )
+os_osx   () ( export TRAVIS_OS="osx"   )
 
 
 #
@@ -117,7 +117,7 @@ provision_brew ()
 # Finds the version for a given shell
 shell_version ()
 {
-	printf %s "Env '$TRIX_ENV': "
+	printf %s "Env '$CONTEXT': "
 	$1 <<-'WHATSHELL'
 
 		: 'This script aims at recognizing all Bourne compatible shells.
@@ -234,7 +234,7 @@ shell_version ()
 	for env in $CONTEXT; do
 		"$env"
 		provision_chooser
-		shell_version "$TARGET_SHELL" "$TRIX_ENV"
+		shell_version "$TARGET_SHELL" "$CONTEXT"
 		"$TARGET_SHELL" bin/tested
 	done
 )
