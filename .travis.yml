@@ -1,0 +1,58 @@
+install:
+  - bin/testing "$CONTEXT"
+matrix:
+  include:
+    - env: CONTEXT="os_linux shell_bash"
+      os:  linux
+
+    - env: CONTEXT="os_linux shell_busybox"
+      os:  linux
+
+    - env: CONTEXT="os_linux shell_dash"
+      os:  linux
+
+    - env: CONTEXT="os_linux shell_bash2_0"
+      os:  linux
+
+    - env: CONTEXT="os_linux shell_bash3_0"
+      os:  linux
+
+    - env: CONTEXT="os_linux shell_bash3_2"
+      os:  linux
+
+    - env: CONTEXT="os_linux shell_bash4_2"
+      os:  linux
+
+    - env: CONTEXT="os_linux shell_zsh_beta"
+      os:  linux
+
+    - env: CONTEXT="os_linux shell_ksh"
+      os:  linux
+
+    - env: CONTEXT="os_linux shell_mksh"
+      os:  linux
+
+    - env: CONTEXT="os_linux shell_pdksh"
+      os:  linux
+
+    - env: CONTEXT="os_linux shell_posh"
+      os:  linux
+
+    - env: CONTEXT="os_linux shell_yash"
+      os:  linux
+
+    - env: CONTEXT="os_linux shell_zsh"
+      os:  linux
+
+    - env: CONTEXT="os_osx shell_bash"
+      os:  osx
+
+    - env: CONTEXT="os_osx shell_ksh"
+      os:  osx
+
+    - env: CONTEXT="os_osx shell_mksh"
+      os:  osx
+
+    - env: CONTEXT="os_osx shell_zsh"
+      os:  osx
+
