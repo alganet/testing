@@ -1,5 +1,5 @@
 install:
-  - bin/testing "$CONTEXT"
+  - sh bin/testing "$CONTEXT"
 matrix:
   include:
     - env: CONTEXT="os_linux shell_bash"
