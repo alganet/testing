@@ -2,5 +2,6 @@
 
 for env in $CONTEXT; do
 	"$env"
-	"$TARGET_SHELL" bin/tested
+	provision_chooser
+	shell_version "$TARGET_SHELL" "$CONTEXT"
 done

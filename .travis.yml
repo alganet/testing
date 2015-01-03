@@ -1,4 +1,6 @@
 install:
+  - sh bin/installing "$CONTEXT"
+script:
   - sh bin/testing "$CONTEXT"
 matrix:
   include:
